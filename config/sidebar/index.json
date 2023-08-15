@@ -1,0 +1,10 @@
+{
+  "label": "Ubah Sidebar",
+  "items": [
+    {
+      "document": "docs/intro.mdx",
+      "label": "",
+      "_template": "doc"
+    }
+  ]
+}

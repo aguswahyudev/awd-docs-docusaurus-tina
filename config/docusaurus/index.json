@@ -1,0 +1,22 @@
+{
+  "label": "Settings",
+  "navbar": [
+    {
+      "label": "Awd",
+      "link": "external",
+      "externalLink": "https://awd.my.id",
+      "position": "right"
+    }
+  ],
+  "logo": {
+    "alt": "Awd Docs",
+    "src": "/img/logo.svg"
+  },
+  "title": "Awd Docs",
+  "footer": {
+    "style": "dark",
+    "links": [],
+    "copyright": "Dibuat dengan ❤️ oleh Agus"
+  },
+  "url": "https://docs.awd.my.id"
+}
