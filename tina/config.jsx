@@ -1,3 +1,5 @@
+require("dotenv").config({ path: ".env.local" });
+
 import React from "react";
 import { defineConfig, TextField } from "tinacms";
 import { ReferenceField } from "tinacms";

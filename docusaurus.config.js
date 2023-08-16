@@ -1,7 +1,13 @@
+require("dotenv").config({ path: ".env.local" });
+
 const docusaurusData = require("./config/docusaurus/index.json");
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+const algoliaAppId = process.env.ALGOLIA_APP_ID;
+const algoliaApiKey = process.env.ALGOLIA_API_KEY;
+const algoliaIndexName = process.env.ALGOLIA_INDEX_NAME;
 
 const getDocId = (doc) => {
   return doc
@@ -108,10 +114,24 @@ const config = {
       }),
     ],
   ],
-  plugins: ["my-loaders", "tailwind-loader"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: "keywords",
+          content: "docs, awd, awd docs, awd documentation, awd my",
+        },
+      ],
+      algolia: {
+        // The application ID provided by Algolia
+        appId: algoliaAppId,
+
+        // Public API key: it is safe to commit it
+        apiKey: algoliaApiKey,
+
+        indexName: algoliaIndexName,
+      },
       navbar: {
         title: docusaurusData.title || "",
         logo: {
